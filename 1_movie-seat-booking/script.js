@@ -11,13 +11,31 @@ let ticketPrice = +movieSelect.value
 // Update total and count
 function updateSelectedCount() {
     const selectedSeats = document.querySelectorAll('.row .seat.selected')
+
+    // -- 새로고침을 해도 선택한 좌석 저장하기
+    // Copy selected seats into arr
+    // Map through array
+    // return a new array indexes
+    const seatsIndex = [...selectedSeats].map((seat) => [...seats].indexOf(seat))
+
+    localStorage.setItem('selectedSeats', JSON.stringify(seatsIndex));
+
     const selectedSeatsCount = selectedSeats.length
     count.innerText = selectedSeatsCount.toString()
     total.innerText = (selectedSeatsCount * ticketPrice).toString()
 }
 
+// Save selected movie index and price
+function setMovieData(movieIndex, moviePrice) {
+    localStorage.setItem('selectedMovieIndex', movieIndex)
+    localStorage.setItem('selectedMoviePrice', moviePrice)
+}
+
 movieSelect.addEventListener('change', (e) => {
     ticketPrice = +e.target.value
+
+    setMovieData(e.taget.selectedIndex, ticketPrice)
+
     updateSelectedCount()
 })
 
