@@ -8,6 +8,9 @@ const movieSelect = document.getElementById('movie')
 // number 타입으로 바꾸려면 - parseInt 혹은 + 붙이기
 let ticketPrice = +movieSelect.value
 
+// 최초 실행 시 UI 초기화
+populateUi();
+
 // Update total and count
 function updateSelectedCount() {
     const selectedSeats = document.querySelectorAll('.row .seat.selected')
@@ -31,10 +34,32 @@ function setMovieData(movieIndex, moviePrice) {
     localStorage.setItem('selectedMoviePrice', moviePrice)
 }
 
+// Get data from localstorage and populate UI
+function populateUi() {
+    const selectedSeats = JSON.parse(localStorage.getItem('selectedSeats'))
+
+    if (selectedSeats !== null && selectedSeats.length > 0) {
+        seats.forEach((seat, index) => {
+            if (selectedSeats.indexOf(index) > -1) {
+                seat.classList.add('selected')
+            }
+        })
+    }
+
+    const selectedMovieIndex = JSON.parse(localStorage.getItem('selectedMovieIndex'))
+    const selectedMoviePrice = JSON.parse(localStorage.getItem('selectedMoviePrice'))
+
+    if (selectedMovieIndex !== null) {
+        movieSelect.selectedIndex = selectedMovieIndex
+    }
+    ticketPrice = selectedMoviePrice
+}
+
+
 movieSelect.addEventListener('change', (e) => {
     ticketPrice = +e.target.value
 
-    setMovieData(e.taget.selectedIndex, ticketPrice)
+    setMovieData(e.target.selectedIndex, ticketPrice)
 
     updateSelectedCount()
 })
@@ -49,3 +74,6 @@ container.addEventListener('click', (e) => {
         updateSelectedCount();
     }
 })
+
+// Initial count and total set
+updateSelectedCount();
