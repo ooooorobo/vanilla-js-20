@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css"/>
+    <title>My Landing Page</title>
+</head>
+<body>
+
+<nav>
+    <div class="logo">
+        <img src="https://randomuser.me/api/portraits/men/76.jpg" alt="user">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Portfolio</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Contact Me</a></li>
+        </ul>
+    </div>
+</nav>
+
+<header>
+    <button id="toggle" class="toggle">
+        <i class="fa fa-bars fa-2x"></i>
+    </button>
+
+    <h1>My Landing Page</h1>
+    <p>석가는 불어 무엇을 구하지 가치를 반짝이는 쓸쓸한 간에 아름다우냐? 이상 뜨거운지라, 거친 때까지 피어나는 붙잡아 피다.</p>
+
+    <button class="cta-btn" id="open">회원가입</button>
+</header>
+
+<div class="container">
+    <h2>무엇을 위한 페이지인가요?</h2>
+    <p>발휘하기 생의 앞이 것이다. 열락의 고동을 천하를 석가는 노래하며 영원히 구하기 천고에 찾아 아니다. 이 청춘이 보배를 인생의 아니다. 낙원을 봄날의 없는 방지하는 인류의 열락의 이것이다. 인간은 안고,
+        인생에 있을 부패뿐이다. 품으며, 얼마나 청춘의 용감하고 미묘한 대중을 부패뿐이다.</p>
+
+    <p>것은 보는 수 그것은 동력은 운다. 것이다.보라, 하는 광야에서 얼음에 이상이 천지는 우리의 천자만홍이 것이다. 붙잡아 스며들어 피고 것은 만물은 것은 맺어, 풀이 미묘한 것이다. 실로 든 쓸쓸한 구하기
+        청춘의 자신과 말이다. 장식하는 가지에 피고 맺어, 않는 그들의 어디 끓는 얼마나 봄바람이다.</p>
+
+    <h2>더 알아보기</h2>
+    <p>없으면, 실로 청춘은 유소년에게서 얼음에 이상 긴지라 않는 사막이다. 할지라도 때에, 가치를 봄날의 이 것은 얼마나 이상이 그것은 이것이다. 천하를 바이며, 뜨거운지라, 얼마나 듣기만 투명하되 길을
+        위하여서. 보배를 목숨이 없으면 싹이 싸인 불어 있는 청춘의 생명을 철환하였는가? 인생에 우리 평화스러운 것이다. 이상의 그림자는 때까지 영원히 불어 교향악이다. 이것은 눈에 청춘을 같이, 구하지
+        인도하겠다는 아름답고 품에 뜨고, 있는가? 이상을 청춘이 찾아 가슴에 싸인 얼음 앞이 뿐이다. 사랑의 만천하의 많이 싶이 사막이다. 같지 따뜻한 열매를 청춘의 길지 그들은 열락의 대중을 끓는다.</p>
+
+    <h2>가치</h2>
+    <ul>
+        <li>Lifetime Access</li>
+        <li>30 Day Money Back</li>
+        <li>Tailored Customer Support</li>
+    </ul>
+
+    <p>이것이야말로 트고, 그들에게 그들을 과실이 이것이다. 이성은 소금이라 하여도 무엇을 못할 온갖 가치를 듣는다. 속에 내는 싹이 힘차게 열매를 놀이 보라. 인간의 위하여 긴지라 끓는 현저하게 쓸쓸하랴?
+        하여도 돋고, 피가 이상, 얼마나 방황하여도, 앞이 약동하다. 열락의 그들은 석가는 풍부하게 품었기 아름답고 앞이 못하다 없는 황금시대다. 하였으며, 새 곧 칼이다. 얼음이 심장의 많이 붙잡아 그림자는
+        커다란 동력은 어디 것이다. 장식하는 가진 피고 부패뿐이다.</p>
+</div>
+
+<!--Modal-->
+<div class="modal-container" id="modal">
+    <div class="modal">
+        <button class="close-btn" id="close">
+            <i class="fa fa-times"></i>
+        </button>
+        <div class="modal-header">
+            <h3>회원가입</h3>
+        </div>
+        <div class="modal-content">
+            <p>제안을 받기 위해 가입하세요.</p>
+            <form class="modal-form">
+                <div>
+                    <label for="name">이름</label>
+                    <input type="text" id="name" placeholder="이름 입력">
+                </div>
+                <div>
+                    <label for="email">이메일</label>
+                    <input type="email" id="email" placeholder="이메일  입력">
+                </div>
+                <div>
+                    <label for="password">비밀번호</label>
+                    <input type="password" id="password" placeholder="비밀번호 입력">
+                </div>
+                <div>
+                    <label for="password2">비밀번호 확인</label>
+                    <input type="password" id="password2" placeholder="비밀번호를 한 번 더 입력">
+                </div>
+                <input type="submit" value="가입하기" class="submit-btn">
+            </form>
+        </div>
+    </div>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
